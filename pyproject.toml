@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "athena-lite"
+version = "0.1.0"
+description = "轻量 AWS Athena 查询工具，凭证从 .env 读取"
+requires-python = ">=3.10"
+dependencies = ["boto3", "pandas", "python-dotenv"]
+
+[project.scripts]
+athena-query = "athena_lite.cli:main"
+
+[tool.setuptools]
+packages = ["athena_lite"]
